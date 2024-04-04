@@ -20,3 +20,12 @@ This document seeks to address the following topics:
 
 ## MVU 101
 
+While MVU shares some surface-level attributes with other acronymic architectural patterns (such as MVC, MVVM, etc), the nature of MVU is fundamentally different in some important ways; of utmost interest is the nature of the `View` and the `Update`.
+
+In a MVU application, **the `View` and `Update` are implemented as functions that are executed by a runtime**. Said aother way: a programmer building a MVU application requires the programmer to define functions to represent the view, and any events that are emitted by either the view or the runtime.
+
+```
+Cool Lustre ASCII art diagram goes here
+```
+
+Imagine a simple website with a single button When that button is clicked, the `onClick` handler for that button does _not_ "run" or "call" a function; that event is **emitted** by the button element, and it is **handled** in the `Update` function.
